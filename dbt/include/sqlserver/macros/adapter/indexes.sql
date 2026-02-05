@@ -12,6 +12,7 @@
     DROP index {{full_relation}}.{{cci_name}}
     CREATE CLUSTERED COLUMNSTORE INDEX {{cci_name}}
     ON {{full_relation}}
+    WITH (ONLINE = ON)
 {% endmacro %}
 
 {% macro drop_xml_indexes() -%}
